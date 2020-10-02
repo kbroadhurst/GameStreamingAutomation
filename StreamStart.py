@@ -16,6 +16,11 @@ def wake_tv():
 	tv.power_on()
 
 def stream_games():
+	print("Waiting for PC to finish booting...")
+	while True:
+		res = subprocess.call(['ping', '-c 1', os.environ['REMOTE_PC']], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+		if res == 0:
+			break
 	print("Starting streaming service...")
 	result = subprocess.call(['moonlight', 'stream', '-1080'])
 
@@ -31,5 +36,7 @@ def main():
 	stream_games()
 	turn_off_tv()
 	
-main()
-
+try:
+	main()
+except KeyboardInterrupt:
+	turn_off_tv()
