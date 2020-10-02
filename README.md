@@ -12,3 +12,4 @@ Install the required dependencies:
 ```shell
 pip3 install --user -r requirements.txt
 ```
+You can add the MAC address of the PC you want to wake to an OS environment variable called `WOL_MAC` to remove the prompt each time
