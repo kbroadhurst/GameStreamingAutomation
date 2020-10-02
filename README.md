@@ -10,5 +10,5 @@ You will need to have the following tools installed :
 
 Install the required dependencies:
 ```shell
-pip install --user -r requirements.txt
+pip3 install --user -r requirements.txt
 ```
