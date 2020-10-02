@@ -7,6 +7,7 @@ Flow is voice command to Google Assistant -> trigger script on Raspberry Pi -> w
 You will need to have the following tools installed : 
 * [python 3](https://www.python.org/downloads/) 
 * [pip 3](https://pip.pypa.io/en/stable/)
+* libcec-dev
 
 Install the required dependencies:
 ```shell
